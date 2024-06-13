@@ -1,0 +1,59 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.7",
+    "heartbeatAt": "2024-06-13T13:21:31.136340",
+    "startedAt": "2024-06-13T13:21:29.482188",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "fit",
+        "--config",
+        "./config/config/base.yaml",
+        "--trainer",
+        "./config/config/trainer/base.yaml",
+        "--model",
+        "./config/config/model/pl_clara_100M.yaml",
+        "--data",
+        "./config/config/data/base.yaml",
+        "--data.root_data_path",
+        "C:/Users/PMLS/Documents/BiCLARA-master/clara/esc50-tars",
+        "--data.num_workers",
+        "6",
+        "--data.batch_size",
+        "6",
+        "--data.dataset_list",
+        "./config/dataset_list.txt",
+        "--trainer.logger.name",
+        "clara_100M_FT_RAV"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\PMLS\\Documents\\BiCLARA-master\\clara\\train.py",
+    "codePathLocal": "clara\\train.py",
+    "codePath": "clara\\train.py",
+    "host": "DESKTOP-8BL3MIG",
+    "username": "PMYLS",
+    "executable": "C:\\Users\\PMLS\\anaconda3\\python.exe",
+    "cpu_count": 10,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 1300.0,
+        "min": 0.0,
+        "max": 1300.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1300.0,
+            "min": 0.0,
+            "max": 1300.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 237.84886169433594,
+            "used": 62.76435089111328
+        }
+    },
+    "memory": {
+        "total": 7.730949401855469
+    }
+}

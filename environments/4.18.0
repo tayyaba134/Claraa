@@ -1,0 +1,15 @@
+Requirement already satisfied: jsonargparse[signatures] in c:\users\pmls\anaconda3\lib\site-packages (4.29.0)
+Requirement already satisfied: PyYAML>=3.13 in c:\users\pmls\anaconda3\lib\site-packages (from jsonargparse[signatures]) (6.0.1)
+Collecting docstring-parser>=0.15 (from jsonargparse[signatures])
+  Downloading docstring_parser-0.16-py3-none-any.whl.metadata (3.0 kB)
+Collecting typeshed-client>=2.1.0 (from jsonargparse[signatures])
+  Downloading typeshed_client-2.5.1-py3-none-any.whl.metadata (7.5 kB)
+Collecting importlib-resources>=1.4.0 (from typeshed-client>=2.1.0->jsonargparse[signatures])
+  Downloading importlib_resources-6.4.0-py3-none-any.whl.metadata (3.9 kB)
+Requirement already satisfied: typing-extensions>=4.5.0 in c:\users\pmls\anaconda3\lib\site-packages (from typeshed-client>=2.1.0->jsonargparse[signatures]) (4.12.2)
+Downloading docstring_parser-0.16-py3-none-any.whl (36 kB)
+Downloading typeshed_client-2.5.1-py3-none-any.whl (606 kB)
+   -------------------------------------- 606.1/606.1 kB 595.9 kB/s eta 0:00:00
+Downloading importlib_resources-6.4.0-py3-none-any.whl (38 kB)
+Installing collected packages: importlib-resources, docstring-parser, typeshed-client
+Successfully installed docstring-parser-0.16 importlib-resources-6.4.0 typeshed-client-2.5.1

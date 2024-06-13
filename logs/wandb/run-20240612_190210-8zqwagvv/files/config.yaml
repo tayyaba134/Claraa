@@ -1,0 +1,141 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.11.7
+    cli_version: 0.17.1
+    framework: huggingface
+    huggingface_version: 4.41.2
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1718200930
+    t:
+      1:
+      - 1
+      - 9
+      - 11
+      - 49
+      - 53
+      - 55
+      - 103
+      2:
+      - 1
+      - 9
+      - 11
+      - 49
+      - 53
+      - 55
+      - 103
+      3:
+      - 7
+      - 13
+      - 23
+      - 66
+      4: 3.11.7
+      5: 0.17.1
+      6: 4.41.2
+      8:
+      - 3
+      - 5
+      13: windows-amd64
+    m:
+    - 1: trainer/global_step
+      6:
+      - 3
+output_dim:
+  desc: null
+  value: 512
+text_encoder_embedding:
+  desc: null
+  value: 512
+text_encoder_pos_embedding_size:
+  desc: null
+  value: 4096
+text_encoder_width:
+  desc: null
+  value: 512
+text_encoder_layers:
+  desc: null
+  value: 10
+text_encoder_heads:
+  desc: null
+  value: 8
+text_encoder_out_channels:
+  desc: null
+  value: 512
+text_encoder_project:
+  desc: null
+  value: 512
+text_encoder_project_dropout_prob:
+  desc: null
+  value: 0.8
+text_encoder_seq_dropout_prob:
+  desc: null
+  value: 0.5
+vocab_size:
+  desc: null
+  value: 50373
+n_mels:
+  desc: null
+  value: 80
+audio_encoder_layers:
+  desc: null
+  value: 10
+audio_encoder_embedding:
+  desc: null
+  value: 512
+audio_encoder_pos_embedding_size:
+  desc: null
+  value: 4096
+audio_encoder_num_latents:
+  desc: null
+  value: 512
+audio_encoder_latent_dim:
+  desc: null
+  value: 512
+audio_encoder_project:
+  desc: null
+  value: 512
+audio_encoder_project_dropout_prob:
+  desc: null
+  value: 0.8
+audio_encoder_cross_heads:
+  desc: null
+  value: 2
+audio_encoder_latent_heads:
+  desc: null
+  value: 16
+audio_encoder_cross_dim_head:
+  desc: null
+  value: 64
+audio_encoder_latent_dim_head:
+  desc: null
+  value: 64
+audio_encoder_weight_tie_layers:
+  desc: null
+  value: false
+audio_encoder_seq_dropout_prob:
+  desc: null
+  value: 0.5
+learning_rate:
+  desc: null
+  value: 0.0001
+learning_rate_patience:
+  desc: null
+  value: 10
+LR_sheduler_T_max:
+  desc: null
+  value: 5000
+LR_sheduler_warmup_steps:
+  desc: null
+  value: 1000
+LR_sheduler_min_lr:
+  desc: null
+  value: 1.0e-06
+LR_sheduler_decay:
+  desc: null
+  value: 1.0
+lr_interval:
+  desc: null
+  value: step

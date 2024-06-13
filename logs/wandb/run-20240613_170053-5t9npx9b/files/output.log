@@ -1,0 +1,79 @@
+  | Name    | Type                  | Params
+--------------------------------------------------
+0 | model   | CLARA                 | 105 M
+1 | loss_fn | CLARALoss             | 0
+2 | acc_fn  | BidirectionalAccuracy | 0
+--------------------------------------------------
+105 M     Trainable params
+0         Non-trainable params
+105 M     Total params
+421.919   Total estimated model params size (MB)
+C:\Users\PMLS\anaconda3\Lib\site-packages\torch\utils\data\dataloader.py:557: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 12 (`cpuset` is not taken into account), which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\trainer\connectors\data_connector.py:436: Consider setting `persistent_workers=True` in 'val_dataloader' to speed up the dataloader worker initialization.
+Sanity Checking: |                                                                               | 0/? [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "C:\Users\PMLS\Documents\BiCLARA-master\clara\train.py", line 93, in <module>
+    cli = MyLightningCLI(
+          ^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\cli.py", line 386, in __init__
+    self._run_subcommand(self.subcommand)
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\cli.py", line 677, in _run_subcommand
+    fn(**fn_kwargs)
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\trainer\trainer.py", line 545, in fit
+    call._call_and_handle_interrupt(
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\trainer\call.py", line 44, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\trainer\trainer.py", line 581, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\trainer\trainer.py", line 990, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\trainer\trainer.py", line 1034, in _run_stage
+    self._run_sanity_check()
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\trainer\trainer.py", line 1063, in _run_sanity_check
+    val_loop.run()
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\loops\utilities.py", line 181, in _decorator
+    return loop_run(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\loops\evaluation_loop.py", line 112, in run
+    self.reset()
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\loops\evaluation_loop.py", line 230, in reset
+    iter(data_fetcher)  # creates the iterator inside the fetcher
+    ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\loops\fetchers.py", line 99, in __iter__
+    super().__iter__()
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\loops\fetchers.py", line 48, in __iter__
+    self.iterator = iter(self.combined_loader)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\utilities\combined_loader.py", line 335, in __iter__
+    iter(iterator)
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\utilities\combined_loader.py", line 144, in __iter__
+    self._load_current_iterator()
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\pytorch_lightning\utilities\combined_loader.py", line 160, in _load_current_iterator
+    self.iterators = [iter(self.iterables[self._iterator_idx])]
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\torch\utils\data\dataloader.py", line 438, in __iter__
+    return self._get_iterator()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\torch\utils\data\dataloader.py", line 386, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\torch\utils\data\dataloader.py", line 1084, in __init__
+    self._reset(loader, first_iter=True)
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\torch\utils\data\dataloader.py", line 1117, in _reset
+    self._try_put_index()
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\torch\utils\data\dataloader.py", line 1351, in _try_put_index
+    index = self._next_index()
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\torch\utils\data\dataloader.py", line 620, in _next_index
+    return next(self._sampler_iter)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\torch\utils\data\sampler.py", line 273, in __iter__
+    sampler_iter = iter(self.sampler)
+                   ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PMLS\anaconda3\Lib\site-packages\torch\utils\data\sampler.py", line 110, in __iter__
+    return iter(range(len(self.data_source)))
+                      ^^^^^^^^^^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
